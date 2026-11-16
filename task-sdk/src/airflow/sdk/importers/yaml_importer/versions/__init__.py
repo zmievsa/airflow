@@ -17,8 +17,8 @@
 """
 Cadwyn ``VersionBundle`` for the YAML Dag format keyed by ``$schema``.
 
-The ``cadwyn`` import is deferred, so importing this package does not pull in
-FastAPI/Starlette. Versions are newest-first.
+The ``cadwyn_core`` import is deferred, so importing this package does not pull
+it in. Versions are newest-first.
 """
 
 from __future__ import annotations
@@ -27,12 +27,12 @@ import functools
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from cadwyn import VersionBundle
+    from cadwyn_core import VersionBundle
 
 
 @functools.cache
 def get_bundle() -> VersionBundle:
     """Build the format's ``VersionBundle`` lazily (newest-to-oldest)."""
-    from cadwyn import HeadVersion, Version, VersionBundle
+    from cadwyn_core import HeadVersion, Version, VersionBundle
 
     return VersionBundle(HeadVersion(), Version("2026-10-30"))

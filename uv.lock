@@ -180,6 +180,8 @@ apache-airflow-shared-template-rendering = false
 apache-airflow-shared-timezones = false
 apache-airflow-task-sdk = false
 apache-airflow-task-sdk-integration-tests = false
+cadwyn = "2026-11-17T00:00:00Z"
+cadwyn-core = "2026-11-17T00:00:00Z"
 google-cloud-aiplatform = "2026-08-13T00:00:00Z"
 pip = false
 pypdf = "2026-10-29T00:00:00Z"
@@ -2338,7 +2340,7 @@ requires-dist = [
     { name = "asgiref", marker = "python_full_version >= '3.14'", specifier = ">=3.11.1" },
     { name = "attrs", specifier = ">=22.1.0,!=25.2.0" },
     { name = "cachetools", specifier = ">=6.0.0" },
-    { name = "cadwyn", specifier = ">=8.1.0" },
+    { name = "cadwyn", specifier = ">=9.1.0rc1" },
     { name = "colorlog", specifier = ">=6.8.2" },
     { name = "cron-descriptor", specifier = ">=1.2.24" },
     { name = "croniter", specifier = ">=6.2.2" },
@@ -9699,7 +9701,7 @@ dependencies = [
     { name = "asgiref" },
     { name = "attrs" },
     { name = "babel" },
-    { name = "cadwyn" },
+    { name = "cadwyn-core" },
     { name = "colorlog" },
     { name = "fsspec" },
     { name = "greenback" },
@@ -9777,7 +9779,7 @@ requires-dist = [
     { name = "asgiref", marker = "python_full_version >= '3.14'", specifier = ">=3.11.1" },
     { name = "attrs", specifier = ">=24.2.0,!=25.2.0" },
     { name = "babel", specifier = ">=2.17.0" },
-    { name = "cadwyn", specifier = ">=8.1.0" },
+    { name = "cadwyn-core", specifier = ">=9.1.0rc1" },
     { name = "colorlog", specifier = ">=6.8.2" },
     { name = "datadog", marker = "extra == 'all'", specifier = ">=0.50.0" },
     { name = "datadog", marker = "extra == 'datadog'", specifier = ">=0.50.0" },
@@ -11387,9 +11389,10 @@ wheels = [
 
 [[package]]
 name = "cadwyn"
-version = "8.2.0"
+version = "9.1.0rc1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
+    { name = "cadwyn-core" },
     { name = "fastapi" },
     { name = "jinja2" },
     { name = "pydantic" },
@@ -11397,9 +11400,23 @@ dependencies = [
     { name = "typing-extensions" },
     { name = "typing-inspection" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/01/6b/62983d663ea924c5e7cfd0657e4bf5939e1a2cc1ba1b60314afb1883c312/cadwyn-8.2.0.tar.gz", hash = "sha256:0da42877e9165690163c369f80f902182394427f07bd1cfa17a4a4afe662cbad", size = 980180, upload-time = "2026-11-01T15:35:33.725Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/44/b8/416f8f5a71a85285022a4d89e017399de57f2c51b2bf8fcf72180f59a441/cadwyn-9.1.0rc1.tar.gz", hash = "sha256:aa42ed8934edd48d9a3766e28dfbc887e04db73478ebfea7ec99c26ef5312906", size = 1057715, upload-time = "2026-11-16T17:58:52.787Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/de/31/c049d01477c20963d37880c9cfd5e9c7f9812f0c8af3068035cf8b9949e0/cadwyn-8.2.0-py3-none-any.whl", hash = "sha256:c5cf734c9f0524ad4f9e7618389a7c18fa4c7373c753c291c77cab4ef00b16ad", size = 135749, upload-time = "2026-11-01T15:35:35.218Z" },
+    { url = "https://files.pythonhosted.org/packages/8f/b1/b06334c7630b34b187c42fb5e828dd5382482d2ba5843ea778e343f7a6a6/cadwyn-9.1.0rc1-py3-none-any.whl", hash = "sha256:08b7e0bc7571751726afff4263e8c2e87e9d01429d4b0659175de34aeac25119", size = 94061, upload-time = "2026-11-16T17:58:51.303Z" },
+]
+
+[[package]]
+name = "cadwyn-core"
+version = "9.1.0rc1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+    { name = "typing-extensions" },
+    { name = "typing-inspection" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/51/95/256dd95abad5e1915eeb8d4425304f573d02f6b932afb93d8455da4c2efa/cadwyn_core-9.1.0rc1.tar.gz", hash = "sha256:8b94384091644442938e8e4b3a4161eff52b725da43e5c1e4056e1504174cfe4", size = 137894, upload-time = "2026-11-16T17:58:47.944Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/48/a4/45370300acb60fa61a4a56b4e61dcdaec469eed25a6bee53e15e83a154e5/cadwyn_core-9.1.0rc1-py3-none-any.whl", hash = "sha256:2d0fb52419bb87db17dfae6705f3f689aa67d1356b1899bc54c786ef4e37ae40", size = 159091, upload-time = "2026-11-16T17:58:49.153Z" },
 ]
 
 [[package]]
